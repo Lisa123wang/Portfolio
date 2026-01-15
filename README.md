@@ -1,4 +1,4 @@
-# Personal Website - Software Engineer Portfolio
+# Software Engineer Portfolio
 
 A modern, responsive personal website built with Vue.js 3 and Vite.
 
