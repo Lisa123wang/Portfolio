@@ -23,6 +23,9 @@
           <RouterLink to="/experience" @click="closeMenu">Experience</RouterLink>
         </li>
         <li>
+          <RouterLink to="/academics" @click="closeMenu">Academics</RouterLink>
+        </li>
+        <li>
           <RouterLink to="/contact" @click="closeMenu">Contact</RouterLink>
         </li>
       </ul>
