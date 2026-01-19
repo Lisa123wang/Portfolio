@@ -141,6 +141,16 @@ export default {
   width: 100%;
 }
 
+.nav-links a.router-link-active,
+.nav-links a.router-link-exact-active {
+  color: var(--primary-color);
+}
+
+.nav-links a.router-link-active::after,
+.nav-links a.router-link-exact-active::after {
+  width: 100%;
+}
+
 .mobile-menu-btn {
   display: none;
   flex-direction: column;
