@@ -1,26 +1,29 @@
-# Software Engineer Portfolio
+# Personal Website - Graduate School Application Portfolio
 
-A modern, responsive personal website built with Vue.js 3 and Vite.
+A modern, professional portfolio website built with Vue.js 3 and Vite, designed for graduate school applications.
 
 ## Features
 
-- 🎨 Modern and beautiful UI design
+- 🎨 Modern and professional UI design
 - 📱 Fully responsive layout
 - ⚡ Fast and optimized with Vite
-- 🎯 Smooth scrolling navigation
-- 💼 Portfolio showcase
-- 📧 Contact form
-- 🌈 Gradient animations and hover effects
+- 🎯 Multi-page navigation with Vue Router
+- 📄 Academic highlights with transcript download
+- 🏆 Awards and competitions showcase
+- 💼 Detailed work experience
+- 📝 Self-study courses documentation
+- 📊 IELTS scores display
+- 🔗 GitHub integration for projects
 
 ## Sections
 
-- **Hero**: Introduction and call-to-action
-- **About**: Personal information and statistics
-- **Skills**: Technical skills and technologies
-- **Projects**: Featured projects with links
-- **Experience**: Work experience timeline
+- **Home**: Introduction and call-to-action
+- **About**: Personal background, self-study courses (NTU VIBE Coding, Automatic Control Systems)
+- **Projects**: Portfolio projects including thesis project with contribution percentage and improvement plans
+- **Experience**: Work experience with detailed achievements
+- **Academics**: GPA, key coursework, IELTS scores, and transcript download
+- **Awards**: Competition results and awards
 - **Contact**: Contact form and social links
-- **Footer**: Additional links and copyright
 
 ## Getting Started
 
@@ -51,43 +54,90 @@ npm run build
 npm run preview
 ```
 
-## Customization
+## Setup Instructions
 
-### Update Personal Information
+### 1. Add Your Transcript PDF
 
-1. **Hero Section** (`src/components/Hero.vue`):
-   - Change name, title, and description
-   - Update social media links
-   - Replace avatar placeholder
+Place your transcript PDF file in the `public` folder and name it `transcript.pdf`. The download link is already configured in the Academics page.
 
-2. **About Section** (`src/components/About.vue`):
-   - Update bio text
-   - Modify statistics
+### 2. Customize Content
 
-3. **Skills** (`src/components/Skills.vue`):
-   - Add or remove skill categories
-   - Update skill items
+Update the following files with your information:
 
-4. **Projects** (`src/components/Projects.vue`):
-   - Add your projects with descriptions
-   - Update GitHub and demo links
-   - Modify tags
+#### `src/components/About.vue`
+- Update self-study section with your courses
+- Modify personal bio
 
-5. **Experience** (`src/components/Experience.vue`):
-   - Add your work experience
-   - Update achievements
+#### `src/components/Projects.vue`
+- Add your thesis project with:
+  - Project title and description
+  - Your contribution percentage
+  - GitHub repository link
+  - Improvement plan link
 
-6. **Contact** (`src/components/Contact.vue`):
-   - Update email address
-   - Add social media links
-   - Configure contact form (backend integration needed)
+#### `src/pages/AcademicsPage.vue`
+- Update GPA values (Overall GPA, Major GPA, Ranking)
+- Add your key coursework with grades
+- Update IELTS scores (overall and individual sections)
+- Add course projects related to research
+
+#### `src/pages/AwardsPage.vue`
+- Add your competition results and awards
+
+#### `src/components/Experience.vue`
+- Update work experience with detailed achievements
+
+### 3. CI/CD Setup (GitHub Actions)
+
+The project includes a GitHub Actions workflow that automatically builds and deploys to GitHub Pages when you push to the `main` branch.
+
+**To enable GitHub Pages:**
+1. Go to your repository Settings > Pages
+2. Source: select "GitHub Actions"
+3. The workflow will automatically deploy on push to `main`
+
+**Note:** Update `vite.config.js` base path if your repository name is different from `personal-website`.
+
+## Project Structure
+
+```
+personal-website/
+├── public/
+│   └── transcript.pdf          # Your transcript (add this file)
+├── src/
+│   ├── components/             # Reusable components
+│   │   ├── About.vue
+│   │   ├── Contact.vue
+│   │   ├── Experience.vue
+│   │   ├── Hero.vue
+│   │   ├── Navigation.vue
+│   │   ├── Projects.vue
+│   │   └── Skills.vue
+│   ├── pages/                  # Page components
+│   │   ├── AboutPage.vue
+│   │   ├── AcademicsPage.vue
+│   │   ├── AwardsPage.vue
+│   │   ├── ContactPage.vue
+│   │   ├── ExperiencePage.vue
+│   │   ├── HomePage.vue
+│   │   └── ProjectsPage.vue
+│   ├── App.vue
+│   ├── main.js
+│   ├── router.js
+│   └── style.css
+├── .github/
+│   └── workflows/
+│       └── deploy.yml          # CI/CD workflow
+└── vite.config.js
+```
 
 ## Technologies Used
 
 - Vue.js 3
+- Vue Router
 - Vite
 - CSS3 (Custom properties, Grid, Flexbox)
-- Modern JavaScript (ES6+)
+- GitHub Actions (CI/CD)
 
 ## Browser Support
 

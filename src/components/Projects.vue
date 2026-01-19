@@ -24,8 +24,26 @@
             </div>
           </div>
           <div class="project-content">
-            <h3 class="project-title">{{ project.title }}</h3>
+            <h3 class="project-title">
+              {{ project.title }}
+              <span v-if="project.isThesis" class="thesis-badge">Thesis</span>
+            </h3>
             <p class="project-description">{{ project.description }}</p>
+            <div v-if="project.isThesis" class="thesis-details">
+              <div class="detail-item">
+                <strong>My Contribution:</strong> <span>{{ project.contribution }}</span>
+              </div>
+              <div v-if="project.improvements" class="detail-item">
+                <a :href="project.improvements" target="_blank" rel="noopener noreferrer" class="improvements-link">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                    <polyline points="15 3 21 3 21 9"></polyline>
+                    <line x1="10" y1="14" x2="21" y2="3"></line>
+                  </svg>
+                  View Improvement Plan
+                </a>
+              </div>
+            </div>
             <div class="project-tags">
               <span class="tag" v-for="tag in project.tags" :key="tag">{{ tag }}</span>
             </div>
@@ -44,11 +62,23 @@ export default {
       projects: [
         {
           id: 1,
+          title: 'Thesis Project: [Your Project Title]',
+          description: 'A comprehensive [description] developed as part of my undergraduate thesis work.',
+          tags: ['[Tech1]', '[Tech2]', '[Tech3]'],
+          github: 'https://github.com/YOUR_USERNAME/YOUR_REPO',
+          demo: null,
+          contribution: 'XX%',
+          improvements: 'https://github.com/YOUR_USERNAME/YOUR_REPO/blob/main/IMPROVEMENTS.md',
+          isThesis: true
+        },
+        {
+          id: 2,
           title: 'E-Commerce Platform',
           description: 'A full-stack e-commerce solution with payment integration, inventory management, and admin dashboard.',
           tags: ['Vue.js', 'Node.js', 'MongoDB', 'Stripe'],
           github: 'https://github.com',
-          demo: 'https://example.com'
+          demo: 'https://example.com',
+          isThesis: false
         },
         {
           id: 2,
@@ -193,6 +223,58 @@ export default {
   font-weight: 600;
   margin-bottom: 0.75rem;
   color: var(--text-primary);
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.thesis-badge {
+  padding: 0.25rem 0.75rem;
+  background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+  color: white;
+  border-radius: 20px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.thesis-details {
+  margin: 1rem 0;
+  padding: 1rem;
+  background: var(--bg-secondary);
+  border-radius: 8px;
+  border-left: 3px solid var(--primary-color);
+}
+
+.detail-item {
+  margin-bottom: 0.5rem;
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+}
+
+.detail-item strong {
+  color: var(--text-primary);
+}
+
+.improvements-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--primary-color);
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.improvements-link:hover {
+  color: var(--primary-dark);
+}
+
+.improvements-link svg {
+  width: 16px;
+  height: 16px;
 }
 
 .project-description {

@@ -2,10 +2,22 @@
   <div class="page">
     <header class="page-header">
       <div class="container">
-        <h1>Academic Highlights</h1>
-        <p>
-          Selected coursework and results that are most relevant to my graduate applications.
-        </p>
+        <div class="header-content">
+          <div>
+            <h1>Academic Highlights</h1>
+            <p>
+              Selected coursework and results that are most relevant to my graduate applications.
+            </p>
+          </div>
+          <a href="/transcript.pdf" class="download-btn" download>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+              <polyline points="7 10 12 15 17 10"></polyline>
+              <line x1="12" y1="15" x2="12" y2="3"></line>
+            </svg>
+            Download Full Transcript (PDF)
+          </a>
+        </div>
       </div>
     </header>
 
@@ -55,6 +67,34 @@
       </div>
 
       <div class="section-block">
+        <h2>English Proficiency</h2>
+        <div class="language-card">
+          <div class="language-header">
+            <span class="language-name">IELTS</span>
+            <span class="language-score">Overall: {{ ieltsScore.overall }}</span>
+          </div>
+          <div class="language-details">
+            <div class="language-item">
+              <span>Listening:</span>
+              <strong>{{ ieltsScore.listening }}</strong>
+            </div>
+            <div class="language-item">
+              <span>Reading:</span>
+              <strong>{{ ieltsScore.reading }}</strong>
+            </div>
+            <div class="language-item">
+              <span>Writing:</span>
+              <strong>{{ ieltsScore.writing }}</strong>
+            </div>
+            <div class="language-item">
+              <span>Speaking:</span>
+              <strong>{{ ieltsScore.speaking }}</strong>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="section-block">
         <h2>Research / Projects in Coursework</h2>
         <p class="section-desc">
           Course projects that are closely related to my intended research direction.
@@ -79,6 +119,13 @@ export default {
   name: 'AcademicsPage',
   data() {
     return {
+      ieltsScore: {
+        overall: 'X.X',
+        listening: 'X.X',
+        reading: 'X.X',
+        writing: 'X.X',
+        speaking: 'X.X'
+      },
       coreCourses: [
         {
           code: 'CSxxx',
@@ -125,6 +172,62 @@ export default {
 </script>
 
 <style scoped>
+.page-header {
+  padding: 3.5rem 0 2.5rem;
+  border-bottom: 1px solid var(--border-color);
+  background: var(--bg-primary);
+}
+
+.page-header h1 {
+  font-size: 2.25rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+.page-header p {
+  color: var(--text-secondary);
+}
+
+.header-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.header-content > div {
+  flex: 1;
+  min-width: 300px;
+}
+
+.download-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1.5rem;
+  background: var(--primary-color);
+  color: white;
+  text-decoration: none;
+  border-radius: 8px;
+  font-weight: 500;
+  font-size: 0.95rem;
+  transition: all 0.3s ease;
+  white-space: nowrap;
+}
+
+.download-btn:hover {
+  background: var(--primary-dark);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-lg);
+}
+
+.download-btn svg {
+  width: 18px;
+  height: 18px;
+  flex-shrink: 0;
+}
+
 .academics-section {
   padding: 3rem 0 4rem;
 }
@@ -250,7 +353,72 @@ export default {
   color: var(--text-secondary);
 }
 
+.language-card {
+  padding: 1.5rem 1.75rem;
+  border-radius: 12px;
+  border: 1px solid var(--border-color);
+  background: #ffffff;
+  box-shadow: var(--shadow);
+  max-width: 500px;
+}
+
+.language-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.language-name {
+  font-size: 1.25rem;
+  font-weight: 600;
+}
+
+.language-score {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--primary-color);
+}
+
+.language-details {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.75rem;
+}
+
+.language-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem 0;
+}
+
+.language-item span {
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+}
+
+.language-item strong {
+  color: var(--text-primary);
+  font-size: 1rem;
+}
+
 @media (max-width: 768px) {
+  .header-content {
+    flex-direction: column;
+  }
+
+  .download-btn {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .language-details {
+    grid-template-columns: 1fr;
+  }
+
   .academics-section {
     padding-top: 2rem;
   }

@@ -14,6 +14,24 @@
             on continuous learning and innovation. I enjoy working with cutting-edge technologies and
             contributing to open-source projects.
           </p>
+          <div class="self-study-section">
+            <h3>Self-Study & Continuous Learning</h3>
+            <p>
+              Beyond the classroom, I actively pursue knowledge through online courses and self-study:
+            </p>
+            <ul class="study-list">
+              <li>
+                <strong>NTU VIBE Coding</strong> - Comprehensive web development and programming fundamentals
+              </li>
+              <li>
+                <strong>Automatic Control Systems (Introduction)</strong> - Control theory and system analysis fundamentals
+              </li>
+            </ul>
+            <p>
+              These self-directed learning experiences have strengthened my problem-solving skills and deepened
+              my understanding of software engineering principles, preparing me for graduate-level research.
+            </p>
+          </div>
           <p>
             When I'm not coding, you can find me exploring new technologies, contributing to tech communities,
             or working on personal projects that challenge my skills and creativity.
@@ -86,6 +104,36 @@ export default {
 
 .about-text p {
   margin-bottom: 1.5rem;
+}
+
+.self-study-section {
+  margin: 2rem 0;
+  padding: 1.5rem;
+  background: var(--bg-secondary);
+  border-radius: 12px;
+  border-left: 4px solid var(--primary-color);
+}
+
+.self-study-section h3 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 0.75rem;
+  color: var(--text-primary);
+}
+
+.study-list {
+  margin: 1rem 0;
+  padding-left: 1.5rem;
+}
+
+.study-list li {
+  margin-bottom: 0.75rem;
+  color: var(--text-secondary);
+  line-height: 1.6;
+}
+
+.study-list li strong {
+  color: var(--text-primary);
 }
 
 .about-stats {

@@ -12,6 +12,9 @@ dist
 dist-ssr
 *.local
 
+# Keep transcript.pdf in public folder (remove this line if you want to ignore it)
+# public/transcript.pdf
+
 # Editor directories and files
 .vscode/*
 !.vscode/extensions.json

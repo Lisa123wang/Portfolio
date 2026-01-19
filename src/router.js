@@ -6,6 +6,7 @@ import ProjectsPage from './pages/ProjectsPage.vue'
 import ExperiencePage from './pages/ExperiencePage.vue'
 import ContactPage from './pages/ContactPage.vue'
 import AcademicsPage from './pages/AcademicsPage.vue'
+import AwardsPage from './pages/AwardsPage.vue'
 
 const routes = [
   { path: '/', name: 'home', component: HomePage },
@@ -13,6 +14,7 @@ const routes = [
   { path: '/projects', name: 'projects', component: ProjectsPage },
   { path: '/experience', name: 'experience', component: ExperiencePage },
   { path: '/academics', name: 'academics', component: AcademicsPage },
+  { path: '/awards', name: 'awards', component: AwardsPage },
   { path: '/contact', name: 'contact', component: ContactPage }
 ]
 

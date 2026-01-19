@@ -26,6 +26,9 @@
           <RouterLink to="/academics" @click="closeMenu">Academics</RouterLink>
         </li>
         <li>
+          <RouterLink to="/awards" @click="closeMenu">Awards</RouterLink>
+        </li>
+        <li>
           <RouterLink to="/contact" @click="closeMenu">Contact</RouterLink>
         </li>
       </ul>
