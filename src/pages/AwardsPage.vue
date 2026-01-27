@@ -70,35 +70,26 @@ export default {
       awards: [
         {
           id: 1,
-          rank: '1st Place',
-          title: '全國大專院校程式設計競賽',
-          event: '教育部 / 中華民國大專校院資訊應用服務創新競賽',
-          date: '2024-03',
-          description: '在三人隊伍中負責演算法設計與優化，使用 C++ 和 Python 解決所有題目，最終以滿分獲得第一名。'
+          rank: 'Excellent Work',
+          title: '中華民國大專校院資訊應用服務創新競賽InnoServe',
+          event: '勞工培力訓練組',
+          date: '2024-11',
+          description: 'Image Narrator 結合 AI 圖片辨識與語音輸出，將 YouTube 影片中的視覺畫面轉為口語描述，縮短視障者與視覺資訊之間的落差，協助其有效運用線上教學資源。'
         },
         {
           id: 2,
-          rank: 'Gold Medal',
-          title: 'ACM-ICPC Asia Regional Contest',
-          event: 'ACM International Collegiate Programming Contest',
-          date: '2023-11',
-          description: '代表學校參賽，負責動態規劃和圖論題目，協助隊伍在區域賽中獲得金獎。'
+          rank: 'Excellent Work',
+          title: '中華民國大專校院資訊應用服務創新競賽InnoServe',
+          event: '資訊應用組',
+          date: '2024-11',
+          description: 'Image Narrator 以 AI 影像辨識與語音合成技術，將影音平台中的視覺內容轉譯為可聽取資訊，落實 ICT 創新應用；系統架構具延展性、可整合多元平台與情境，提升視障者對圖像式教學資源的存取能力。'
         },
         {
           id: 3,
-          rank: '2nd Place',
-          title: '校際 Hackathon - 智慧校園創新應用',
-          event: '大學資訊工程學系',
-          date: '2023-06',
-          description: '開發智慧課堂管理系統，整合 IoT 感測器與 Web 應用，獲得評審團特別獎。'
-        },
-        {
-          id: 4,
-          rank: 'Outstanding Achievement',
-          title: '機器學習競賽 - 影像辨識挑戰',
-          event: 'Data Science Society',
-          date: '2024-01',
-          description: '使用深度學習模型（CNN + Transformer）達到 95% 準確率，在參賽隊伍中排名前 10%。'
+          rank: 'Gold Medal',
+          title: 'iLink生成式AI創意應用大賽',
+          date: '2024-12',
+          description: 'Image Narrator 運用 AI 圖片辨識技術，將畫面轉化為可理解的語音敘述，協助視障者跨越視覺障礙，展現生成式 AI 在無障礙應用上的創新價值。'
         }
       ]
     }
