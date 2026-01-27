@@ -23,7 +23,7 @@
           <div class="award-content">
             <div class="award-rank">{{ award.rank }}</div>
             <h3 class="award-title">{{ award.title }}</h3>
-            <div class="award-event">{{ award.event }}</div>
+            <div v-if="award.event" class="award-event">{{ award.event }}</div>
             <div class="award-date">{{ award.date }}</div>
             <p v-if="award.description" class="award-description">{{ award.description }}</p>
           </div>
@@ -88,6 +88,7 @@ export default {
           id: 3,
           rank: 'Gold Medal',
           title: 'iLink生成式AI創意應用大賽',
+          event: '實踐組',
           date: '2024-12',
           description: 'Image Narrator 運用 AI 圖片辨識技術，將畫面轉化為可理解的語音敘述，協助視障者跨越視覺障礙，展現生成式 AI 在無障礙應用上的創新價值。'
         }
