@@ -1,19 +1,9 @@
 <template>
   <section id="about" class="about">
     <div class="container">
-      <h2 class="section-title">About Me</h2>
+
       <div class="about-content">
         <div class="about-text">
-          <p>
-            I'm a passionate software engineer with a love for creating elegant solutions to complex problems.
-            With expertise in modern web technologies, I specialize in building scalable applications that
-            deliver exceptional user experiences.
-          </p>
-          <p>
-            My journey in software development started with curiosity and has evolved into a career focused
-            on continuous learning and innovation. I enjoy working with cutting-edge technologies and
-            contributing to open-source projects.
-          </p>
           <div class="self-study-section">
             <h3>Self-Study & Continuous Learning</h3>
             <p>
@@ -32,10 +22,7 @@
               my understanding of software engineering principles, preparing me for graduate-level research.
             </p>
           </div>
-          <p>
-            When I'm not coding, you can find me exploring new technologies, contributing to tech communities,
-            or working on personal projects that challenge my skills and creativity.
-          </p>
+
         </div>
         <div class="about-stats">
           <div class="stat-item">

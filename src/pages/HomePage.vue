@@ -1,13 +1,7 @@
 <template>
   <div class="page home-page">
     <Hero />
-    <section class="home-intro container">
-      <h2 class="page-subtitle">What I Do</h2>
-      <p>
-        I design and build reliable, maintainable software systems with a focus on clean architecture,
-        performance, and long‑term scalability.
-      </p>
-    </section>
+
   </div>
 </template>
 

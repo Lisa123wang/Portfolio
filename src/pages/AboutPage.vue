@@ -7,13 +7,6 @@
       </div>
     </header>
     <About />
-    <section class="container page-extra">
-      <h2>How I Work</h2>
-      <p>
-        I value clear communication, pragmatic decision‑making, and strong collaboration with
-        product, design, and other engineering teams.
-      </p>
-    </section>
   </div>
 </template>
 

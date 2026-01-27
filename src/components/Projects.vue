@@ -81,42 +81,10 @@ export default {
           isThesis: false
         },
         {
-          id: 2,
-          title: 'Task Management App',
-          description: 'A collaborative task management application with real-time updates and team collaboration features.',
-          tags: ['React', 'Firebase', 'TypeScript'],
-          github: 'https://github.com',
-          demo: 'https://example.com'
-        },
-        {
           id: 3,
           title: 'Weather Dashboard',
           description: 'A beautiful weather dashboard with location-based forecasts and interactive maps.',
           tags: ['Vue.js', 'API Integration', 'Chart.js'],
-          github: 'https://github.com',
-          demo: null
-        },
-        {
-          id: 4,
-          title: 'Social Media Analytics',
-          description: 'Analytics platform for tracking social media metrics and generating insights.',
-          tags: ['Python', 'Django', 'PostgreSQL', 'D3.js'],
-          github: 'https://github.com',
-          demo: 'https://example.com'
-        },
-        {
-          id: 5,
-          title: 'Portfolio Website',
-          description: 'A responsive portfolio website showcasing projects and skills with modern design.',
-          tags: ['Vue.js', 'Vite', 'CSS3'],
-          github: 'https://github.com',
-          demo: null
-        },
-        {
-          id: 6,
-          title: 'API Gateway Service',
-          description: 'Microservices API gateway with authentication, rate limiting, and request routing.',
-          tags: ['Node.js', 'Express', 'Redis', 'Docker'],
           github: 'https://github.com',
           demo: null
         }
